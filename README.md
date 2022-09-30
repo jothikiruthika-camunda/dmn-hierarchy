@@ -1,7 +1,8 @@
-# dmn-hierarchy
-C8 evaluation of a DRD with sub decisions
+# Exploring Decision Evaluation
 
-When the Root DMN is invoked, with the inputs required for the sub-decision as well, the expectation is that the result of the sub-decision, in this example, the riskLevel (output from RiskLevel DMN) should be passed on as input to the Root DMN ( riskLevel defined as input expression in Car Loan granting DMN)
+### Problem statement - C8 evaluation of a DRD with sub decisions - output of the sub decisions are not persisted at the process instance level and not propogated to the root decision.
+
+Refer the Carloan granting BPMN. The Business Rule task is referring to the Root DMN table in the DRD hierarchy(Car Loan Granting decision table). When the Root DMN table is invoked, with the inputs required for the sub-decision as well, the expectation is that the result of the sub-decision table, in this example, the riskLevel (output from RiskLevel DMN table) should be passed on as input to the Root DMN table( riskLevel defined as input expression in Car Loan granting DMN table). But the output of Risk Level DMN is not available during the execution of "Car Loan Granting" DMN table and hence the expected outputs don't appear. The output of the Root DMN table - "applicationAccepted" is null. 
 
 
 ## Test Data
